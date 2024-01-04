@@ -1,24 +1,34 @@
-import { useState,useEffect } from "react";
+import {  useState } from "react";
+// import { useEffect } from "react";
 import axios from "axios";
 
 
 const FetchData = () => {
 const[fetchedData,setFetchedData] = useState([]);
-console.log(fetchedData);
 
-useEffect(()=>{
-    axios.get("https://jsonplaceholder.typicode.com/users")
-    .then((res)=>{setFetchedData(res.data)})
-    .catch((err)=>{console.error(err);})
-},[])
+const handleFetchData = ()=>{
+        axios.get("https://jsonplaceholder.typicode.com/users")
+        .then((res)=>{setFetchedData(res.data)})
+        .catch((err)=>{console.error(err);})
+
+}
+// useEffect Fetching
+// useEffect(()=>{
+//     axios.get("https://jsonplaceholder.typicode.com/users")
+//     .then((res)=>{setFetchedData(res.data)})
+//     .catch((err)=>{console.error(err);})
+// },[])
+
 
   return (
 <>    
-  <div className="text-center">
-      <h1 className=" text-3xl m-10 text-yellow-300"> Data Fetching From JSON using Axios</h1> 
+  <div className="text-center bg-black">
+      <h1 className=" text-3xl p-10 text-yellow-300"> Data Fetching From JSON using Axios</h1> 
+      <button onClick={handleFetchData} className=" text-black bg-yellow-600 p-4 m-2 text-2xl rounded-lg">Fetch Data</button>
+
       <hr />
   </div>
-  <div className="grid items-start">
+  <div className="grid items-start bg-black text-white">
     <table>
         <thead className=" text-yellow-400 text-start ">
             <td>ID</td>          
