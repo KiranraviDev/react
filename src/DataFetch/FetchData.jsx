@@ -5,7 +5,7 @@ import axios from "axios";
 
 const FetchData = () => {
 const[fetchedData,setFetchedData] = useState([]);
-
+console.log(fetchedData);
 const handleFetchData = ()=>{
         axios.get("https://jsonplaceholder.typicode.com/users")
         .then((res)=>{setFetchedData(res.data)})
