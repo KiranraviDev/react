@@ -24,7 +24,7 @@ const handleFetchData = ()=>{
 <>    
   <div className="text-center bg-black">
       <h1 className=" text-3xl p-10 text-yellow-300"> Data Fetching From JSON using Axios</h1> 
-      <button onClick={handleFetchData} className=" text-black bg-yellow-600 p-4 m-2 text-2xl rounded-lg">Fetch Data</button>
+      <button onClick={handleFetchData} className=" text-black bg-yellow-500 p-4 m-2 text-2xl rounded-lg">Fetch Data</button>
 
       <hr />
   </div>

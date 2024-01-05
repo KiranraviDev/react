@@ -1,0 +1,90 @@
+React Interview Data
+
+Stage - I
+
+1. What is React ? What is the role of react in the software development ?
+
+ ex : user (req)  (hit the server)-> client / frontend server --> API Server/ Middleware --> Database(Backend)
+     user (req)  (Recive) <-- client / frontend server <-- API Server/ Middleware <-- Database(Backend)
+
+     in this cycle "client / frontend server" is React library.
+
+     3 main poin about React:   This is a Opensourse Javascript library , 
+                                used for building UI , 
+                                React simplifies the creattion of SPA (Single Page Application) by Reusable Components.
+     
+
+2. Key Features of React ? 
+
+   1. Virtual DOM  (minimizing direct manipuation of the actual DOM, resulting i improved perfomance.)
+   2. Component Based Architecture
+   3. Reusablity and Composition
+   4. JSX (Javascript XML)
+   5. Declarative Syntax
+   6. Community and Ecosystem
+   7. React Hooks
+
+3. What is DOM ?
+   (Document Objecet Model) - represents the webpage as a tree like structure which allows js to dynamically access the content and structre of a web page.
+    HTML is a Markup Language only.
+
+4. What is Virtual DOM ? what are the diff between the DOM vs VDOM ?
+    if a user change a h1 tag text . the whole DOM will be re renderd.
+    in VDOM - this create a DOM copy and show to the user (copy of real DOM is called VDOM)
+    i VDOM if the user make a change the DOM will render the changed element only. not the Whole DOM.
+    this is called (Re-concilition).this helps to improve the perfomence and make the application more responsive.
+
+5.What are React Components ? what are the main element of this?
+
+  Component is a Reusable Building-blocks for creating UI.
+
+    code:
+    import React from "react";
+
+    function App(){
+        return(
+            log("This is a React Reusable component Syntax")
+        )
+    }
+    export default App;
+
+   
+6. What is SPA (Single Page Application) ?
+
+   if a new element added of modified in the website. the webpage will not re render. shows the single page of web and 
+   update the modified element data only. this is called SPA.
+   ex: youtube . if we click the video recommandation. the site will not re render. the page component only render.
+   this is called SPA.
+
+   SPA have a single page  for render a webpage.
+   whenever user trigger a function the page data dynamically changes in a single page.
+
+7. What are the Advantages of React ?
+
+   1. React used for build a Single Page Application.(by using the components)
+   2. React is cross-platform and open source ( Free to use)
+   3. Lightweight and Fast (VDOM)
+   4. Large Community and Ecosystem
+   5. Easy to Test the UI.
+
+8. What are the Dis-Advantages in React ?
+
+   1.React not good for Small Application.
+
+9. What is the Role of JSX in React ?
+
+    HTML + Javascript = (Javascript XML).
+    bable convert the JSX into Javascript.
+
+10. Declarative (vs) Imperative code ?
+     
+    "React" is a Declarative syntax and Declarative code.
+
+    <h1>Hello React</h1> // in this case the JSX is say to the browser. 
+    "hey, create and read a h1 element and show the text..."
+
+    pure Javascript is (Imperative syntax code)
+
+
+    END OF BASIC - I
+____________________________________________________________________________________________________________________________________

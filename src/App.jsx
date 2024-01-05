@@ -10,6 +10,7 @@ function App() {
     <Routes>
     <Route path='/' element={<Home/>}/>
     <Route path='/api' element={<FetchData/>}/>
+
     </Routes>
     </BrowserRouter>
   )
