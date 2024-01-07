@@ -1,3 +1,65 @@
+React is a popular JavaScript library for building user interfaces. Here are some fundamental topics in React that you should be familiar with:
+
+    Components:
+        React applications are built using components, which are reusable and independent pieces of UI.
+        Components can be either functional (stateless) or class-based (stateful).
+
+    JSX (JavaScript XML):
+        JSX is a syntax extension for JavaScript that looks similar to XML or HTML.
+        It allows you to write HTML elements and components in a JavaScript file.
+
+    Props (Properties):
+        Props are used to pass data from a parent component to a child component.
+        They are read-only and cannot be modified by the child component.
+
+    State:
+        State is used to manage the internal data of a component.
+        Class components have state, while functional components use the useState hook to manage state.
+
+    Lifecycle Methods (Class Components):
+        Class components have lifecycle methods, such as componentDidMount, componentDidUpdate, and componentWillUnmount.
+        These methods allow you to perform actions at different stages of a component's life.
+
+    Hooks (Functional Components):
+        Hooks are functions that allow functional components to use state and lifecycle features.
+        Common hooks include useState, useEffect, useContext, etc.
+
+    Event Handling:
+        React uses camelCase for event handling, such as onClick instead of onclick.
+        Event handlers are defined as functions in your components.
+
+    Conditional Rendering:
+        Conditional rendering allows you to show or hide components based on certain conditions.
+        You can use conditional statements or the ternary operator for conditional rendering.
+
+    Lists and Keys:
+        React provides the map function to iterate over arrays and render a list of components.
+        Each item in a list should have a unique "key" prop.
+
+    Forms in React:
+        React handles form elements like any other DOM elements.
+        You can use controlled components to manage the state of form elements.
+
+    React Router:
+        React Router is a library for handling navigation in React applications.
+        It enables the creation of routes to different components.
+
+    State Management (Redux):
+        For larger applications, state management libraries like Redux are often used to manage the application state in a centralized manner.
+
+    Context API:
+        The Context API allows you to share values (like themes or authentication status) across the component tree without explicitly passing props at every level.
+
+    Error Boundaries:
+        Error boundaries are components that catch JavaScript errors anywhere in their child component tree and log those errors.
+
+    Higher-Order Components (HOC) and Render Props:
+        Techniques for code reuse and component composition.
+
+    React Hooks:
+        Introduced in React 16.8, hooks allow functional components to use state and lifecycle features without needing class components.
+
+
 React Interview Data
 
 Stage - I (0:01 - 27:00 mins)
@@ -88,3 +150,34 @@ Stage - I (0:01 - 27:00 mins)
 
     END OF BASIC - I
 ____________________________________________________________________________________________________________________________________
+
+Basic - II 
+
+1. What is Arrow function expression in JSX ?
+
+   Regular function Declaration : a function and a name of function and the rounded brakets.
+
+   function App (props){
+    return (
+        <h1>{props.text}</h1>
+    )
+   }
+
+   export default App;
+
+   Arrorw function expression: 
+
+   Declaring a function using the Arrorw is called Arrorw function expression.
+   this is a combination of Arrow funtion & function expression.
+   this is a consice way of declaring a function.(consice : giving a lot of information clearly and in a few words; brief but comprehensive.)
+
+
+   const App = (props) =>{
+    return (
+        <h1>{props.text}</h1>
+    )
+   }
+   export default App;
+
+
+2. How to setup 

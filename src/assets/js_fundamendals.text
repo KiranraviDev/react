@@ -1,0 +1,231 @@
+Global Scope: Variables declared outside any function or block have global scope.
+             They can be accessed from any part of the code.
+
+             ex: // Global Scope
+
+let globalVar = "I'm global";
+
+function exampleFunction() {
+  console.log(globalVar); // Accessible here
+}
+
+exampleFunction();
+console.log(globalVar); // Accessible here as well
+
+
+Block Scope: Variables declared with let or const inside a block (enclosed by curly braces {}) have block scope. 
+             They are only accessible within that block.
+
+             // Block Scope
+
+
+function exampleBlockScope() {
+  if (true) {
+    let localVar = "I'm local";
+    console.log(localVar); // Accessible here
+  }
+  // console.log(localVar); // Not accessible here (results in an error)
+}
+
+exampleBlockScope();
+
+
+
+Hoisting in JS :
+
+Hoisting in JavaScript is a behavior where variable and function declarations are moved to the top of their containing scope during the compilation phase,
+ before the code is executed. 
+ This means that you can use a variable or call a function 
+ even before it's declared in the code.
+
+console.log(myVar); // undefined
+var myVar = 42;
+console.log(myVar); // 42
+
+Function Hoisting:
+__________________
+
+sayHello(); // "Hello, World!"
+
+function sayHello() {
+  console.log("Hello, World!");
+}
+
+
+
+
+
+
+
+
+
+object methods in js with simple example
+
+Object.keys()
+
+Returns an array of a given object's own enumerable property names.
+
+  let person = {
+  name: "John",
+  age: 30,
+  city: "New York"
+};
+
+let keys = Object.keys(person);
+
+console.log(keys); // ["name", "age", "city"]
+
+2.Object.values()
+
+    Returns an array of a given object's own enumerable property values.
+
+    let person = {
+  name: "John",
+  age: 30,
+  city: "New York"
+};
+
+let values = Object.values(person);
+
+console.log(values); // ["John", 30, "New York"]
+
+3. Object.entries()
+    Returns an array of a given object's own enumerable property [key, value] pairs.
+
+    let person = {
+  name: "John",
+  age: 30,
+  city: "New York"
+};
+
+let entries = Object.entries(person);
+console.log(entries);
+// [["name", "John"], ["age", 30], ["city", "New York"]]
+
+
+4.Object.assign()
+
+     Copies the values of all enumerable properties from one or more source objects to a target object.
+
+     let target = { a: 1, b: 2 };
+let source = { b: 3, c: 4 };
+
+let mergedObject = Object.assign(target, source);
+console.log(mergedObject); // { a: 1, b: 3, c: 4 }
+
+5. Object.freeze()
+
+    Freezes an object, preventing new properties from being added and existing properties from being removed or modified.
+
+    let car = {
+  make: "Toyota",
+  model: "Camry"
+};
+
+Object.freeze(car);
+
+// The following operations will not work
+car.color = "blue"; // Won't add a new property
+delete car.model;   // Won't delete an existing property
+
+console.log(car); // { make: "Toyota", model: "Camry" }
+
+
+6. Object.hasOwnProperty()
+   
+       Returns a boolean indicating whether an object has the specified property.
+
+       let person = {
+  name: "John",
+  age: 30
+};
+
+console.log(person.hasOwnProperty("name")); // true
+console.log(person.hasOwnProperty("gender")); // false
+
+
+
+
+SYNC VS ASYNC  JS : 
+__________________
+Synchronous: Synchronous code executes one statement at a time
+
+ex: console.log("Start");
+
+function syncFunction() {
+  console.log("Processing...");
+}
+
+syncFunction();
+
+console.log("End");
+
+
+
+
+Asynchronous: Asynchronous code allows certain operations to be non-blocking, 
+allowing other code to run while waiting for the asynchronous operation to complete. 
+Common asynchronous operations include network requests, file I/O, and timers.
+
+console.log("Start");
+
+function asyncFunction() {
+  setTimeout(function () {
+    console.log("Async operation complete.");
+  }, 2000);
+}
+s
+asyncFunction();
+
+console.log("End");
+
+OUTPUT : 
+Start
+End
+Async operation complete.
+
+
+
+Imperative Programming:
+
+Definition: Imperative programming is a paradigm where you explicitly state the steps that 
+a program should take to accomplish a task. It focuses on describing how to achieve the desired 
+result in a step-by-step manner.
+
+example: // Imperative JavaScript example
+
+let numbers = [1, 2, 3, 4, 5];
+let squaredNumbers = [];
+
+for (let i = 0; i < numbers.length; i++) {
+  squaredNumbers.push(numbers[i] * numbers[i]);
+}
+
+console.log(squaredNumbers); // Output: [1, 4, 9, 16, 25]
+
+
+Declarative Programming:
+
+Definition: Declarative programming is a paradigm where you describe what you want to 
+achieve without specifying how to do it explicitly. You declare the outcome, 
+and the underlying system figures out the steps to reach that outcome.
+
+example:
+// Declarative React example
+import React from 'react';
+
+const numbers = [1, 2, 3, 4, 5];
+
+const App = () => {
+  const squaredNumbers = numbers.map(number => number * number);
+
+  return (
+    <div>
+      {squaredNumbers.map((squaredNumber, index) => (
+        <p key={index}>{squaredNumber}</p>
+      ))}
+    </div>
+  );
+};
+
+// Render the React component
