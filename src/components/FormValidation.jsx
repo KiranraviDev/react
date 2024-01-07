@@ -104,7 +104,7 @@ const SimpleFormValidation = () => {
           <p className="error text-red-500">{formErrors.password}</p>
         </div>
 
-        <button type="submit" className='bg-yellow-500 text-black rounded p-5 m-2'>Submit</button>
+        <button type="submit" className='bg-yellow-500 text-black rounded p-2 m-2'>Submit</button>
       </form>
     </div>
   );

@@ -13,7 +13,7 @@ React is a popular JavaScript library for building user interfaces. Here are som
         They are read-only and cannot be modified by the child component.
 
     State:
-        State is used to manage the internal data of a component.
+        State is used to manage the internal data offreeze a component.
         Class components have state, while functional components use the useState hook to manage state.
 
     Lifecycle Methods (Class Components):
